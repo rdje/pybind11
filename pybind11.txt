@@ -1,0 +1,7 @@
+vcs $(FULL64_OPT) -top $(TOP_LEVEL_MODULES) -top glbl +vcs+lic+wait $(COMPILE_WAVEDUMP) +lint=TFIPC-L $(C_DPI_DYN_LIBS) 						\
+-L/tool/pandora64/.package/python-3.9.1/lib/ -lpython3.9  						               																		  \
+-L$(VERIF_CLIFDEN_ROOT)/lib/python3.9/site-packages/numpy.libs -lquadmath-96973f99.0.0.0  -lgfortran-040039e1.5.0.0 -lopenblas64_p-r0-0cf96a72.3.23.dev \
+$(VERIF_CLIFDEN_ROOT)/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so 						\
+$(VERIF_CLIFDEN_ROOT)/models/python/csa/csa.cpython-39-x86_64-linux-gnu.so	\
+$(VERIF_CLIFDEN_ROOT)/models/python/tm/tm.cpython-39-x86_64-linux-gnu.so	\
+-lca $(VCS_FSDB_COMP_SWITCH) $(UVM_REG_LIBSO) $(COV_RUN_OPTS) -o simv -l compile3_elab.log
